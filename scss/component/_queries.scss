@@ -1,0 +1,76 @@
+/* ================================
+Media Queries =====================
+================================ */
+@media (min-width: $breakpoint) {
+
+    /* ================================
+    Containers/Layout =================
+    ================================ */
+    .container {            
+      @include center-disp {
+        max-width: 1400px;
+      }
+    }
+    
+    .centered {             
+      @include center-disp;
+    }
+    
+    /* ================================
+    Grid  =============================
+    ================================ */
+    .row {
+      flex-direction: row;
+    }
+    
+    [class^=col] {
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      align-items: center;
+    }
+    
+    [class^=col] + [class^=col] {
+      margin-left: 10px;
+    }
+    
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            flex-basis: ($i / 12) * 100%;
+        }
+    }
+    
+    /* ================================
+    Navigation ========================
+    ================================ */
+    .nav {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    .nav-link {
+      flex-basis: 100px;
+    }
+    
+    /* ================================
+    Button ============================
+    ================================ */ 
+
+    .btn {
+      padding: 10px 30px;
+    }
+    
+    .btn + .btn {
+      margin-left: 10px;
+    }
+    
+    /* ================================
+    Images ============================
+    ================================ */ 
+    .logo {
+      margin-left: initial;
+      margin-right: initial;
+    }
+    
+}

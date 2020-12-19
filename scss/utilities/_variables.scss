@@ -1,0 +1,33 @@
+// ==============================================
+// Colors =======================================
+// ==============================================
+$color-text: #777;
+$white: #fff;
+$color-frame: #ccc;
+$color-link: #51ddfc;
+$color-theme: #58e1c1;
+$button-colors: (
+    "default": #51ddfc,
+    "error": #e4757a,
+    "info": #927bc1,
+    "success": #63cc82,
+    "warning":  #fd7856
+);
+$column-colors: (       // Assigning a color to multiple variable names 
+    1: #927bc1,     // didn't seem very DRY to me, but I figure if 
+    2: #fd7856,     // I were building a website like this, I'd want to 
+    3: #deb2ee,     // easily access and manage the various colors. 
+    4: #7ee6fd,     
+    5: #88d9a0, 
+    6: #4da2bb, 
+    7: #ec9fa3, 
+    8: #fd9f85, 
+    9: #e4757a,
+    10: #63cc82,
+    11: #51ddfc, 
+    12: #80e8d1
+);
+// ==============================================
+// Breakpoint ===================================
+// ==============================================
+$breakpoint: 768px;

@@ -1,0 +1,32 @@
+/* ================================
+Button Styles =====================
+================================ */
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    color: $white;
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+$button-types: (    //Made a separate list in case I would want to add more types
+    "default", 
+    "error", 
+    "info", 
+    "success", 
+    "warning"
+);
+
+@each $type in $button-types {
+    .#{$type} {
+        background-color: map-get($button-colors, $type);
+        &:hover {
+            background-color: lighten(map-get($button-colors, $type), 15%);
+        }
+    }
+}
+
+

@@ -1,0 +1,24 @@
+/* ================================
+Image Styles ======================
+================================ */
+
+.img {
+    &-avatar {
+        @include center-disp {
+            margin-top: 10px;
+            max-width: 100%; 
+            max-height: 100%;
+        }
+    }
+    &-frame {
+        @include center-disp {
+            margin-top: 10px;
+            max-width: 100%; 
+            padding: 13px;
+            border: 1px solid $color-frame;
+        }
+    }
+    &-logo {
+       @include center-disp;
+    }
+}
